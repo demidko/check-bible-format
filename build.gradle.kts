@@ -6,7 +6,7 @@ repositories {
 }
 plugins {
   kotlin("jvm") version "1.8.0"
-  id("com.palantir.graal") version "0.12.0"
+  id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 dependencies {
   implementation("org.jsoup:jsoup:1.15.3")
@@ -21,14 +21,10 @@ tasks.withType<KotlinCompile> {
 tasks.test {
   useJUnitPlatform()
 }
-graal {
-  javaVersion("17")
-  graalVersion("22.3.0")
-  option("--no-fallback")
-  mainClass("UtilityKt")
-  outputName(projectDir.name)
-  windowsVsVarsPath("C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Auxiliary\\Build\\vcvars64.bat")
+tasks.shadowJar {
+  minimize() // if build is unsuccessful, you can disable it
+  // also, if build still unsuccessful, you can try to add mergeServiceFiles() call
 }
 tasks.build {
-  dependsOn(tasks.nativeImage)
+  dependsOn(tasks.shadowJar)
 }
