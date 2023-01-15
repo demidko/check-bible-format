@@ -31,8 +31,7 @@
 В терминале (cmd, bash или PowerShell подойдут) откройте папку с программой и наберите
 
 ```shell
-java -jar check-bible-format stern.html
-
+java -jar check-bible-format.jar stern.html
 ```
 
 Затем нужно нажать клавишу Enter. Вместо `stern.html` может идти любой файл для проверки. Все файлы для проверки
