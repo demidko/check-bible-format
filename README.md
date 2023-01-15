@@ -5,7 +5,7 @@
 
 ## Скачать
 
-* [Для Windows](https://github.com/demidko/check-bible-format/releases/download/2023.01.15/check-bible-format-linux)
+* [Для Windows](https://github.com/demidko/check-bible-format/releases/download/2023.01.15/check-bible-format.exe)
 * [Для macOS](https://github.com/demidko/check-bible-format/releases/download/2023.01.15/check-bible-format-macos)
 * [Для Linux](https://github.com/demidko/check-bible-format/releases/download/2023.01.15/check-bible-format-linux)
 
