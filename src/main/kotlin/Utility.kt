@@ -9,11 +9,13 @@ object Utility : CliktCommand(
   "check-bible-format"
 ) {
 
-  val file by argument("файл", "файл библии в этой же папке, например, stern.html").file()
+  private val file by argument("файл", "файл библии в этой же папке, например, stern.html").file()
 
   override fun run() {
-    val url = file.toURI().toURL()
-    Bible(url)
+    file
+      .toURI()
+      .toURL()
+      .let(::Bible)
   }
 }
 
