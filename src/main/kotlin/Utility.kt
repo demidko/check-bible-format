@@ -16,6 +16,7 @@ object Utility : CliktCommand(
       .toURI()
       .toURL()
       .let(::Bible)
+    echo("Этот файл в порядке и не требует исправлений.")
   }
 }
 
