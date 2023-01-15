@@ -21,6 +21,10 @@ tasks.withType<KotlinCompile> {
 tasks.test {
   useJUnitPlatform()
 }
+tasks.jar {
+  isZip64 = true
+  manifest.attributes("Main-Class" to "UtilityKt")
+}
 tasks.shadowJar {
   minimize() // if build is unsuccessful, you can disable it
   // also, if build still unsuccessful, you can try to add mergeServiceFiles() call
