@@ -1,7 +1,7 @@
 # check-bible-format
 
 Утилита для проверки библейских файлов на
-соответствие [формату BibleQuote](https://github.com/demidko/BibleQuote).
+соответствие формату [BibleQuote](https://github.com/demidko/BibleQuote).
 
 ## Скачать
 
@@ -16,6 +16,8 @@
 ```shell
 ./check-bible-format stern.html
 ```
+
+Вместо `stern.html` может идти любой файл для проверки. Файлы для проверки можно [найти здесь](https://github.com/demidko/BibleQuote/tree/main/src/main/resources/bible).
 
 ## Формат
 
