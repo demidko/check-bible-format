@@ -5,18 +5,18 @@ repositories {
   maven("https://jitpack.io")
 }
 plugins {
-  kotlin("jvm") version "1.7.22"
+  kotlin("jvm") version "1.8.0"
   id("com.palantir.graal") version "0.12.0"
 }
 dependencies {
-  implementation("com.github.ajalt.clikt:clikt:3.5.0")
-  testImplementation("org.junit.jupiter:junit-jupiter:5.9.0")
+  implementation("org.jsoup:jsoup:1.15.3")
+  implementation("com.github.ajalt.clikt:clikt:3.5.1")
+  testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
   testImplementation("com.google.truth:truth:1.1.3")
   testImplementation("io.mockk:mockk:1.13.2")
 }
 tasks.withType<KotlinCompile> {
   kotlinOptions.jvmTarget = "17"
-  kotlinOptions.freeCompilerArgs += listOf("-opt-in=kotlin.time.ExperimentalTime")
 }
 tasks.test {
   useJUnitPlatform()

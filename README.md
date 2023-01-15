@@ -1,52 +1,16 @@
-# Utility
+# check-bible-format
 
-The cross-platform native Kotlin command line tool template.
+Утилита для проверки библейских файлов на
+соответствие [формату BibleQuote](https://github.com/demidko/BibleQuote/blob/main/src/main/kotlin/app/biblequote/utils/HtmlBibleReader.kt).
 
-## Usage
+## Скачать
 
-Make sure you are signed in to your GitHub account, then just [click here](https://github.com/demidko/utility/generate)
-to use template.
+* [Для Windows]()
+* [Для macOS]()
+* [Для Linux]()
 
-## Download
-
-GitHub CI automatically generates versions of the application for different operating systems. See the Actions Tab.
-
-* [Windows version]()
-* [macOS version]()
-* [Linux version]()
-
-## Build
-
-You can build the utility yourself from the source code. We need GCC or LLVM or Visual Studio toolchain. If you are
-using Windows, you need to configure [`windowsVsVarsPath`](build.gradle.kts) property.
+## Пример использования
 
 ```shell
-./gradlew clean build
+./check-bible-format stern.html
 ```
-
-After that, we can run the release app:
-
-```shell
-./build/graal/utility
-```
-
-## Containerization
-
-To build the image, we need Docker installed:
-
-```shell
-docker build . -t utility
-```
-
-After that, we can run the app in the container (if needed):
-
-```shell
-docker run -v `pwd`:`pwd` -w `pwd` -it --rm -p 80:80 utility
-```
-
-To clean up Docker use `docker system prune -fa`
-
-## Interop with Java
-
-By default, you can use any java class or library in this project.
-
