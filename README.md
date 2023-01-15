@@ -5,7 +5,7 @@
 
 ## Скачать
 
-* [Для Windows](https://github.com/demidko/check-bible-format/releases/download/2023.01.15/check-bible-format.exe)
+* [Для Java](https://github.com/demidko/check-bible-format/releases/download/2023.01.15/check-bible-format.jar)
 * [Для macOS](https://github.com/demidko/check-bible-format/releases/download/2023.01.15/check-bible-format-macos)
 * [Для Linux](https://github.com/demidko/check-bible-format/releases/download/2023.01.15/check-bible-format-linux)
 
@@ -31,7 +31,7 @@
 В терминале (cmd, bash или PowerShell подойдут) откройте папку с программой и наберите
 
 ```shell
-./check-bible-format stern.html
+java -jar check-bible-format stern.html
 
 ```
 
@@ -41,7 +41,7 @@
 такую
 
 ```text
-Exception in thread "main" java.lang.IllegalStateException: Стих По Матфею 1:26 отсутствует
+java.lang.IllegalStateException: Стих По Матфею 1:26 отсутствует
 ```
 
 Это необязательно означает, что стих отсутствует, может быть, его в этом переводе вообще нет, или может
