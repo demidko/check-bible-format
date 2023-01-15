@@ -66,7 +66,7 @@ class HtmlBibleReader(private val reader: BufferedReader) : Closeable {
     val verseNumberAsText = verseNumber.toString()
     val verseText = currentText()
     val verseNumberIdx = verseText.indexOf(verseNumberAsText)
-    if (verseNumberIdx >= 0) {
+    check(verseNumberIdx >= 0) {
       "Стих $bookName $chapterNumber:$verseNumber не найден в тексте: $verseText"
     }
     val pureTextIdx = verseNumberIdx + verseNumberAsText.length
@@ -76,10 +76,12 @@ class HtmlBibleReader(private val reader: BufferedReader) : Closeable {
     return Verse(bookName, chapterNumber, verseNumber, pureText)
   }
 
-  fun nextVerse() = when {
-    isNewBook -> loadNewBook()
-    isNewChapter -> loadNewChapter()
-    else -> loadNewVerse()
+  fun nextVerse(): Verse {
+    return when {
+      isNewBook -> loadNewBook()
+      isNewChapter -> loadNewChapter()
+      else -> loadNewVerse()
+    }
   }
 
   override fun close() {
