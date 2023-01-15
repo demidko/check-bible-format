@@ -1,6 +1,6 @@
 package app.biblequote
 
-import HtmlBibleReader
+import app.biblequote.utils.HtmlBibleReader
 import app.biblequote.utils.Verse
 import java.net.URL
 
