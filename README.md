@@ -5,11 +5,7 @@
 
 ## Скачать
 
-* [Для Java](https://github.com/demidko/check-bible-format/releases/download/2023.01.15/check-bible-format.jar)
-* [Для macOS](https://github.com/demidko/check-bible-format/releases/download/2023.01.15/check-bible-format-macos)
-* [Для Linux](https://github.com/demidko/check-bible-format/releases/download/2023.01.15/check-bible-format-linux)
-
-Может потребоваться разрешить утилите работу в вашей системе (или пометить ее как исполняемую).
+* [Для Java](https://github.com/demidko/check-bible-format/releases/download/2023.01.16/check-bible.jar)
 
 ## Формат
 
