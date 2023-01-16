@@ -27,7 +27,7 @@
 В терминале (cmd, bash или PowerShell подойдут) откройте папку с программой и наберите
 
 ```shell
-java -jar check-bible.jar stern.html
+java -jar checkbible stern.html
 ```
 
 Затем нужно нажать клавишу Enter. Вместо `stern.html` может идти любой файл для проверки. Все файлы для проверки
