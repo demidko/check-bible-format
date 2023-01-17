@@ -5,7 +5,7 @@
 
 ## Скачать
 
-* [Для Java](https://github.com/demidko/check-bible-format/releases/download/2023.01.16/checkbible)
+* [Для Java](https://github.com/demidko/check-bible-format/releases/download/2023.01.17/bible)
 
 ## Формат
 

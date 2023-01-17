@@ -28,6 +28,7 @@ tasks.jar {
 tasks.shadowJar {
   minimize() // if build is unsuccessful, you can disable it
   // also, if build still unsuccessful, you can try to add mergeServiceFiles() call
+  archiveFileName.set("bible")
 }
 tasks.build {
   dependsOn(tasks.shadowJar)

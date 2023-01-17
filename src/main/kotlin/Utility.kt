@@ -12,11 +12,14 @@ object Utility : CliktCommand(
   private val file by argument("файл", "файл библии в этой же папке, например, stern.html").file()
 
   override fun run() {
-    file
-      .toURI()
-      .toURL()
-      .let(::Bible)
-    echo("Этот файл в порядке и не требует исправлений.")
+    val bible = file.toURI().toURL().let(::Bible)
+    for (book in bible.booksNames) {
+      echo("\"$book\" to listOf(")
+      for (chapter in (1..bible.chaptersCount(book))) {
+        echo("${bible.versesCount(book, chapter)}", lineSeparator = ", ")
+      }
+      echo("),")
+    }
   }
 }
 
